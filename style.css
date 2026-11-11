@@ -388,6 +388,7 @@ a { color: inherit; }
 /* aucun effet de trait sur le nom et le mail : texte net, sélectionnable */
 .c-name { font-size: clamp(1.9rem, 6vw, 3.4rem); line-height: 1.1; color: #fff; }
 .c-mail { margin-top: .35em; font-size: clamp(1.05rem, 3.6vw, 1.7rem); }
+.c-mail-2 { margin-top: .15em; }
 .c-mail a {
   color: var(--acid);
   text-decoration: underline;
