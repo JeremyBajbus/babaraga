@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Baba Raga — Démolition</title>
+  <meta name="description" content="Baba Raga, nu metal fusion et ragga toasting français depuis le Luxembourg. Album « Démolition », sortie le 2 octobre 2026.">
+
+  <meta property="og:type" content="music.album">
+  <meta property="og:title" content="Baba Raga — Démolition">
+  <meta property="og:description" content="Nu metal fusion · Ragga toasting français · Luxembourg. Album « Démolition », sortie le 2 octobre 2026.">
+  <meta property="og:image" content="https://jeremybajbus.github.io/babaraga/assets/demolition.png">
+  <meta property="og:image:width" content="1254">
+  <meta property="og:image:height" content="1254">
+  <meta property="og:image:alt" content="Pochette de l'album Démolition de Baba Raga">
+  <meta property="og:url" content="https://jeremybajbus.github.io/babaraga/">
+  <meta property="og:locale" content="fr_FR">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://jeremybajbus.github.io/babaraga/assets/demolition.png">
+
+  <link rel="icon" href="assets/demolition.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik+Mono+One&family=Archivo+Black&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+
+  <!-- Filtre SVG : craquelures sur les lettres blanches -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <defs>
+      <filter id="crack" x="-5%" y="-5%" width="110%" height="110%">
+        <feTurbulence type="fractalNoise" baseFrequency="0.035 0.05" numOctaves="3" seed="7" result="n"/>
+        <feColorMatrix in="n" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  1 0 0 0 0" result="a"/>
+        <feComponentTransfer in="a" result="lines">
+          <feFuncA type="discrete" tableValues="0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0"/>
+        </feComponentTransfer>
+        <feComposite in="SourceGraphic" in2="lines" operator="out"/>
+      </filter>
+    </defs>
+  </svg>
+
+  <!-- FOND : formes CSS pures (parallaxe via script.js) -->
+  <div class="bg" aria-hidden="true">
+    <span class="shape s-acid-1"  data-speed="0.10"></span>
+    <span class="shape s-cyan-1"  data-speed="-0.06"></span>
+    <span class="shape s-mag-1"   data-speed="0.14"></span>
+    <span class="shape s-green-1" data-speed="-0.10"></span>
+    <span class="shape s-acid-2"  data-speed="0.08"></span>
+    <span class="shape s-cyan-2"  data-speed="0.12"></span>
+    <span class="shape s-mag-2"   data-speed="-0.08"></span>
+    <span class="shape s-green-2" data-speed="0.06"></span>
+  </div>
+
+  <!-- Grain : un seul rect SVG plein écran, aucune tuile -->
+  <svg class="grain" aria-hidden="true" focusable="false" preserveAspectRatio="none">
+    <filter id="grain-f" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="2" seed="11"/>
+      <feColorMatrix type="saturate" values="0"/>
+    </filter>
+    <rect width="100%" height="100%" filter="url(#grain-f)"/>
+  </svg>
+
+  <main class="page">
+
+    <!-- 1. HERO -->
+    <header class="hero">
+      <h1 class="logo">
+        <span class="l1">BABA</span>
+        <span class="l2">RAGA</span>
+      </h1>
+      <p class="tagline">Nu metal fusion <i>·</i> Ragga toasting français <i>·</i> Luxembourg</p>
+      <a class="scroll" href="#album" aria-label="Descendre vers l'album">
+        <span>Scroll</span><b aria-hidden="true"></b>
+      </a>
+    </header>
+
+    <!-- 2. ALBUM -->
+    <section class="slab album" id="album" aria-labelledby="album-title">
+      <div class="inner">
+        <div class="sleeve reveal">
+          <span class="tape tape-l" aria-hidden="true"></span>
+          <span class="tape tape-r" aria-hidden="true"></span>
+          <img src="assets/demolition.png" width="1254" height="1254"
+               alt="Pochette de l'album Démolition de Baba Raga : un homme encapuchonné à masque de crâne tenant une masse devant des immeubles en ruine">
+        </div>
+
+        <div class="info reveal">
+          <p class="kicker">Nouvel album</p>
+          <h2 id="album-title" class="title"><span>DÉMOLITION</span></h2>
+          <p class="release"><span>Sortie</span> 2 octobre 2026</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. TRACKLIST -->
+    <section class="slab tracks" aria-labelledby="tl-title">
+      <div class="inner">
+        <h3 id="tl-title" class="tl-head reveal">Tracklist</h3>
+        <ol class="tracklist">
+          <li class="reveal"><b>On tient les murs</b></li>
+          <li class="reveal"><b>Brûle-le</b></li>
+          <li class="reveal"><b>Ça monte</b></li>
+          <li class="reveal"><b>Guetteur</b></li>
+          <li class="reveal"><b>Kingston</b></li>
+          <li class="reveal"><b>Green Fire</b></li>
+          <li class="reveal"><b>L'été</b></li>
+          <li class="reveal"><b>Démolition</b></li>
+          <li class="reveal"><b>Démolition <em>(Live Bonus)</em></b></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- 4. SPOTIFY -->
+    <div class="cta">
+      <a class="btn reveal" href="https://open.spotify.com/artist/7w8kw8bHkzJMMcmIylojhA" rel="noopener">Écouter sur Spotify</a>
+    </div>
+
+    <!-- 5. CONTACT -->
+    <footer class="slab contact" id="contact">
+      <div class="inner reveal">
+        <h2 class="c-title">Contact</h2>
+        <p class="c-name">Jeremy Bajbus</p>
+        <p class="c-mail"><a href="mailto:jeremy.bajbus@gmail.com">jeremy.bajbus@gmail.com</a></p>
+        <p class="c-place">Luxembourg</p>
+        <p class="c-dk">Distributed by DistroKid</p>
+      </div>
+    </footer>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
